@@ -73,7 +73,7 @@ std::vector<std::string> ModuleRegistry::moduleNames() {
   for (size_t i = 0; i < modules_.size(); i++) {
     std::string name = normalizeName(modules_[i]->getName());
     modulesByName_[name] = i;
-    names.push_back(std::move(name));
+    names.push_back(name);
   }
   return names;
 }
